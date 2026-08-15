@@ -1,0 +1,342 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* =========================
+   CUSTOM SCROLLBAR
+========================= */
+
+html {
+    scrollbar-color: #917761 #f7f4ef;
+    scrollbar-width: thin;
+}
+
+/* Chrome / Edge / Brave / Safari */
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f7f4ef;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #917761;
+    border-radius: 10px;
+    border: 3px solid #f7f4ef;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6f5845;
+}
+
+body,
+h1 {
+    margin: 0;
+}
+
+.main-theme {
+    --primary-color: #917761;
+    --primary-dark: #6f5845;
+    --secondary-color: #d8c3a5;
+    --background-color: #f7f4ef;
+    --surface-color: #ffffff;
+    --text-color: #2f2a26;
+    --muted-color: #756f6a;
+    --border-color: #e5ded6; 
+    --success-color: #557a61; 
+}
+
+.heading {
+    user-select: none;
+    min-height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bg-brown {
+    background: linear-gradient(
+        135deg,
+        #5f4938 0%,
+        #917761 55%,
+        #a88d72 100%
+    );
+}
+
+.logo-container {
+    margin-left: -50px;
+}
+
+.logo-ic {
+    color: #c7b295;
+    font-size: 1.8rem;
+    padding: 0.2rem 1rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.navig {
+    margin-right: -50px;
+}
+
+.hero-section {
+    background: linear-gradient(
+        135deg,
+        rgba(63, 45, 32, 0.75),
+        rgba(145, 119, 97, 0.55)
+    ),
+    url('hotel_room1.jpg') center/cover no-repeat;
+
+    min-height: 20vh;
+    user-select: none;
+}
+
+.hero-content h1 {
+    letter-spacing: -1px;
+}
+
+.search-box-wrapper {
+    max-width: 800px;
+    width: 100%;
+}
+
+.modern-search-bar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    padding: 8px 10px 8px 24px;
+    border-radius: 100px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    gap: 12px;
+    transition: all 0.3s ease;
+}
+
+.modern-search-bar:focus-within {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    background: #ffffff;
+}
+
+.search-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 12px;
+}
+
+.input-icon {
+    font-size: 1.2rem;
+    color: #475569;
+}
+
+.input-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-content label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: #64748b;
+    margin-bottom: 2px;
+}
+
+.input-content input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #0f172a;
+    width: 100%;
+    padding: 0;
+}
+
+.input-content input::placeholder {
+    color: #94a3b8;
+}
+
+.search-btn {
+    background: #0f172a;
+    color: #ffffff;
+    border: none;
+    border-radius: 100px;
+    padding: 14px 32px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+    white-space: nowrap;
+}
+
+.search-btn:hover {
+    background: #1e293b;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .modern-search-bar {
+        flex-direction: column;
+        border-radius: 24px;
+        padding: 16px;
+    }
+
+    .search-item {
+        width: 100%;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 10px;
+    }
+
+    .search-btn {
+        width: 100%;
+        border-radius: 16px;
+        margin-top: 8px;
+    }
+}
+
+@media (min-width: 769px) {
+    .border-end-sm {
+        border-right: 1px solid #e2e8f0;
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background: linear-gradient(
+        135deg,
+        #3f3025,
+        #5f4938
+    );
+
+    color: #f7f4ef;
+}
+
+
+/* =========================
+   FOOTER LOGO
+========================= */
+
+.footer-logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.footer-icon {
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+}
+
+
+/* =========================
+   FOOTER DESCRIPTION
+========================= */
+
+.footer-text {
+    color: #d8cec4;
+    line-height: 1.7;
+    max-width: 380px;
+}
+
+
+/* =========================
+   FOOTER TITLES
+========================= */
+
+.footer-title {
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}
+
+
+/* =========================
+   FOOTER LINKS
+========================= */
+
+.footer-links li {
+    margin-bottom: 0.7rem;
+}
+
+.footer-links a {
+    color: #d8cec4;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--secondary-color);
+}
+
+
+/* =========================
+   SOCIAL LINKS
+========================= */
+
+.social-links a {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    transition: all 0.2s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   CONTACT INFO
+========================= */
+
+.footer-contact p {
+    color: #d8cec4;
+    margin-bottom: 0.8rem;
+}
+
+.footer-contact i {
+    width: 25px;
+    color: var(--secondary-color);
+}
+
+
+/* =========================
+   FOOTER BOTTOM
+========================= */
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding: 1.2rem 0;
+
+    color: #bfb5ac;
+    font-size: 0.9rem;
+}
