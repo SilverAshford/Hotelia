@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="BootFiles/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="BootFiles/css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/inventory.css">
+    <title>Hotelia Admin - Inventory</title>
+    <link rel="shortcut icon" href="assets/leaf.png" type="image/x-icon">
+</head>
+<body class="main-theme">
+
+    <header class="bg-brown">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between heading">
+                <a href="admin.html" class="d-flex logo-container text-decoration-none">
+                    <i class="fa-solid fa-feather-pointed logo-ic"></i>
+                    <h1 class="logo text-white m-0">Hotelia Admin</h1>
+                </a>
+                <nav class="d-flex align-items-center gap-3 navig">
+                    <a href="admin.html" class="btn btn-outline-light">Dashboard</a>
+                    <a href="inventory.html" class="btn btn-outline-light">Inventory</a>
+                    <a href="admin-profile.html" class="btn btn-light" style="color:var(--primary-dark);font-weight:bold;">
+                        <i class="fa-solid fa-user-circle me-1"></i>Profile
+                    </a>
+                    <button onclick="logoutAdmin()" class="btn btn-outline-light">Logout</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+<main>
+    <div class="container admin-section">
+        
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h2 class="fw-bold text-dark m-0"><i class="fa-solid fa-calendar-check me-2" style="color: var(--primary-color);"></i>Room Inventory</h2>
+                <p class="text-muted mt-2">Manage daily room availability to prevent double booking.</p>
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="filter-card">
+            <form class="row g-3 align-items-end">
+                <div class="col-md-3">
+                    <label class="form-label fw-bold small text-muted text-uppercase">Select Hotel</label>
+                    <select class="form-select">
+                        <option selected>Grand Royal</option>
+                        <option>Sea View Resort</option>
+                        <option>Mountain Lodge</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label fw-bold small text-muted text-uppercase">Start Date</label>
+                    <input type="date" class="form-control" value="2026-08-15">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label fw-bold small text-muted text-uppercase">End Date</label>
+                    <input type="date" class="form-control" value="2026-08-22">
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-dark w-100">Load Inventory</button>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Inventory Table -->
+        <div class="table-responsive table-custom">
+            <table class="table table-hover mb-0">
+                <thead>
+                    <tr>
+                        <th class="py-3 px-4">Date</th>
+                        <th class="py-3">Room Type</th>
+                        <th class="py-3 text-center">Total Rooms</th>
+                        <th class="py-3 text-center">Booked</th>
+                        <th class="py-3 text-center">Available (To Sell)</th>
+                        <th class="py-3 text-end px-4">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="px-4 fw-semibold">15 Aug 2026</td>
+                        <td>Luxury Suite</td>
+                        <td class="text-center">10</td>
+                        <td class="text-center text-danger fw-bold">8</td>
+                        <td class="text-center">
+                            <input type="number" class="input-qty" value="2" min="0" max="10">
+                        </td>
+                        <td class="text-end px-4">
+                            <button class="btn btn-sm btn-outline-success fw-bold">Save</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 fw-semibold">15 Aug 2026</td>
+                        <td>Standard Double</td>
+                        <td class="text-center">40</td>
+                        <td class="text-center text-danger fw-bold">15</td>
+                        <td class="text-center">
+                            <input type="number" class="input-qty" value="25" min="0" max="40">
+                        </td>
+                        <td class="text-end px-4">
+                            <button class="btn btn-sm btn-outline-success fw-bold">Save</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 fw-semibold">16 Aug 2026</td>
+                        <td>Luxury Suite</td>
+                        <td class="text-center">10</td>
+                        <td class="text-center text-danger fw-bold">10</td>
+                        <td class="text-center">
+                            <input type="number" class="input-qty" value="0" min="0" max="10">
+                            <span class="badge bg-danger ms-2">Sold Out</span>
+                        </td>
+                        <td class="text-end px-4">
+                            <button class="btn btn-sm btn-outline-success fw-bold">Save</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</main>
+
+<footer class="footer">
+    <!-- Footer content remains the same as admin.html -->
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="d-flex align-items-center mb-3">
+                    <i class="fa-solid fa-feather-pointed footer-icon me-2"></i>
+                    <h3 class="footer-logo m-0">Hotelia Admin</h3>
+                </div>
+                <p class="footer-text">Manage the best stays and ensure the highest quality experience for all our guests.</p>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+                <h5 class="footer-title">Admin Links</h5>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="admin.html">Dashboard</a></li>
+                    <li><a href="hotels.html">Hotels</a></li>
+                    <li><a href="rooms.html">Room Types</a></li>
+                    <li><a href="inventory.html">Inventory</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+                <h5 class="footer-title">Support</h5>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">Admin Guide</a></li>
+                    <li><a href="#">System Status</a></li>
+                    <li><a href="#">Contact IT</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-lg-4">
+                <h5 class="footer-title">Get in Touch</h5>
+                <div class="footer-contact">
+                    <p><i class="fa-solid fa-location-dot"></i> Egypt, Cairo HQ</p>
+                    <p><i class="fa-solid fa-envelope"></i> admin@hotelia.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +20 101 149 2397</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                <p class="m-0">© 2026 Hotelia Admin Panel. All rights reserved.</p>
+                <p class="m-0">Powered by Hotelia Core Systems.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="BootFiles/js/bootstrap.bundle.min.js"></script>
+<script src="BootFiles/js/all.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/admin-inventory.js"></script>
+</body>
+</html>

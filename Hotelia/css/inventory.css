@@ -1,0 +1,50 @@
+/* ==========================================================================
+   ROOM INVENTORY MANAGEMENT PAGE STYLES (inventory.html)
+   ========================================================================== */
+
+.admin-section {
+    padding: 4rem 0;
+}
+
+.table-custom {
+    background: var(--surface-color);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    border: 1px solid var(--border-color);
+}
+
+.table-custom thead {
+    background-color: var(--surface-color);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.table-custom th {
+    color: var(--primary-dark);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.table-custom td {
+    color: var(--text-color);
+    vertical-align: middle;
+}
+
+.filter-card {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+
+.input-qty {
+    width: 70px;
+    text-align: center;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    padding: 0.3rem;
+}

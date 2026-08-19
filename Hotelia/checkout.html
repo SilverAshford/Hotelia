@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="BootFiles/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="BootFiles/css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/checkout.css">
+
+    <title>Hotelia - Checkout</title>
+    <link rel="shortcut icon" href="assets/leaf.png" type="image/x-icon">
+</head>
+
+<body class="main-theme">
+
+    <header class="bg-brown">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between heading">
+                <a href="index.html" class="d-flex logo-container text-decoration-none">
+                    <i class="fa-solid fa-feather-pointed logo-ic"></i>
+                    <h1 class="logo text-white m-0">Hotelia</h1>
+                </a>
+                <nav class="d-flex align-items-center gap-3 navig">
+                    <a href="index.html" class="btn btn-outline-light border-0">Home</a>
+                    <a href="my_bookings.html" class="btn btn-outline-light border-0">My Bookings</a>
+                    <a href="#" class="btn btn-outline-light">Logout</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+<main class="checkout-section">
+    <div class="container">
+        
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-bold text-dark">Complete Your Reservation</h2>
+            <p class="text-muted">Review your booking details and confirm to secure your stay.</p>
+        </div>
+
+        <div class="row g-5">
+            <!-- Booking Form -->
+            <div class="col-lg-7">
+                <div class="checkout-card mb-4">
+                    <h4 class="fw-bold mb-4 border-bottom pb-3">Guest Information</h4>
+                    <form>
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label">First Name</label>
+                                <input type="text" class="form-control" placeholder="John" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" class="form-control" placeholder="Doe" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Email Address</label>
+                                <input type="email" class="form-control" placeholder="john@example.com" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" placeholder="+1 234 567 890" required>
+                            </div>
+                        </div>
+
+                        <h4 class="fw-bold mb-4 mt-5 border-bottom pb-3">Stay Details</h4>
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Check-in Date</label>
+                                <input type="date" id="checkInDate" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Check-out Date</label>
+                                <input type="date" id="checkOutDate" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Adults</label>
+                                <select class="form-select">
+                                    <option>1 Adult</option>
+                                    <option selected>2 Adults</option>
+                                    <option>3 Adults</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Children</label>
+                                <select class="form-select">
+                                    <option selected>0 Children</option>
+                                    <option>1 Child</option>
+                                    <option>2 Children</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <label class="form-label">Special Requests (Optional)</label>
+                            <textarea class="form-control" rows="3" placeholder="Any special needs or requests..."></textarea>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Booking Summary Sidebar -->
+            <div class="col-lg-5">
+                <div class="checkout-card position-sticky" style="top: 2rem;">
+                    <h4 class="fw-bold mb-4 border-bottom pb-3">Booking Summary</h4>
+                    
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="room-thumb me-3"><i class="fa-solid fa-bed"></i></div>
+                        <div>
+                            <h5 class="fw-bold mb-1">Standard Double Room</h5>
+                            <p class="text-muted small mb-0">Grand View Resort & Spa</p>
+                        </div>
+                    </div>
+
+                    <div class="summary-box mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Price per night</span>
+                            <span class="fw-semibold">$120</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Duration</span>
+                            <span class="fw-semibold">3 Nights</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3 border-bottom pb-3">
+                            <span class="text-muted">Taxes & Fees</span>
+                            <span class="fw-semibold">$45</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bold fs-5 text-dark">Total Cost</span>
+                            <span class="total-price">$405</span>
+                        </div>
+                    </div>
+
+                    <p class="text-muted small mb-4 text-center">
+                        <i class="fa-solid fa-info-circle me-1"></i> Your booking will be set to <strong>PENDING</strong> pending hotel confirmation. No payment required now.
+                    </p>
+
+                    <button class="btn-submit" onclick="window.location.href='my_bookings.html'">Submit Reservation</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="d-flex align-items-center mb-3">
+                    <i class="fa-solid fa-feather-pointed footer-icon me-2"></i>
+                    <h3 class="footer-logo m-0">Hotelia</h3>
+                </div>
+                <p class="footer-text">Find your perfect stay, explore amazing destinations, and make every journey unforgettable.</p>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+                <h5 class="footer-title">Explore</h5>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Hotels</a></li>
+                    <li><a href="#">Destinations</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+                <h5 class="footer-title">Support</h5>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-lg-4">
+                <h5 class="footer-title">Get in Touch</h5>
+                <div class="footer-contact">
+                    <p><i class="fa-solid fa-location-dot"></i> Egypt, Cairo</p>
+                    <p><i class="fa-solid fa-envelope"></i> support@hotelia.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +20 101 149 2397</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                <p class="m-0">© 2026 Hotelia. All rights reserved.</p>
+                <p class="m-0">Made for travelers, by travelers.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="BootFiles/js/bootstrap.bundle.min.js"></script>
+<script src="BootFiles/js/all.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>

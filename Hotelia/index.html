@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="BootFiles/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="BootFiles/css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/home.css">
+
+    <title>Hotelia</title>
+    <link rel="shortcut icon" href="assets/leaf.png" type="image/x-icon">
+</head>
+
+<body class="main-theme">
+
+    <header class="bg-brown">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between heading">
+
+                <a href="index.html" class="d-flex logo-container text-decoration-none">
+                    <i class="fa-solid fa-feather-pointed logo-ic"></i>
+                    <h1 class="logo text-white m-0">Hotelia</h1>
+                </a>
+
+                <nav class="d-flex align-items-center gap-3 navig">
+
+                    <a href="signup.html" class="btn btn-light">
+                        Sign Up
+                    </a>
+
+                    <a href="login.html" class="btn btn-outline-light">
+                        Login
+                    </a>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+
+<main>
+    <section class="hero-section d-flex align-items-center py-5">
+        <div class="container">
+            <div class="text-center text-white mb-5 hero-content">
+                <h1 class="display-4 fw-bold">Explore The World</h1>
+                <p class="lead opacity-75">Discover incredible places and plan your next stay</p>
+            </div>
+
+            <div class="search-box-wrapper mx-auto">
+                <form class="modern-search-bar d-flex align-items-center">
+                    
+                    <div class="search-item flex-grow-1">
+                        <i class="fa-solid fa-location-dot input-icon"></i>
+                        <div class="input-content">
+                            <label for="destination">Destination</label>
+                            <input type="text" id="destination" placeholder="City or hotel name">
+                        </div>
+                    </div>
+
+                    <div class="search-item">
+                        <i class="fa-regular fa-calendar-days input-icon"></i>
+                        <div class="input-content">
+                            <label for="checkIn">Check-in</label>
+                            <input type="date" id="checkIn" required>
+                        </div>
+                    </div>
+
+                    <div class="search-item">
+                        <i class="fa-regular fa-calendar-check input-icon"></i>
+                        <div class="input-content">
+                            <label for="checkOut">Check-out</label>
+                            <input type="date" id="checkOut" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="search-btn">
+                        <i class="fa-solid fa-magnifying-glass me-2"></i>
+                        <span>Search</span>
+                    </button>
+
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+
+    <div class="container py-5">
+
+        <div class="row g-4">
+
+            <!-- Brand -->
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="d-flex align-items-center mb-3">
+                    <i class="fa-solid fa-feather-pointed footer-icon me-2"></i>
+                    <h3 class="footer-logo m-0">Hotelia</h3>
+                </div>
+
+                <p class="footer-text">
+                    Find your perfect stay, explore amazing destinations,
+                    and make every journey unforgettable.
+                </p>
+
+                <div class="social-links d-flex gap-3 mt-3">
+
+                    <a href="#" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                    <a href="#" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#" aria-label="Twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="#" aria-label="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Quick Links -->
+            <div class="col-6 col-md-3 col-lg-2">
+
+                <h5 class="footer-title">Explore</h5>
+
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Hotels</a></li>
+                    <li><a href="#">Destinations</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+
+            </div>
+
+
+            <!-- Support -->
+            <div class="col-6 col-md-3 col-lg-2">
+
+                <h5 class="footer-title">Support</h5>
+
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+
+            </div>
+
+
+            <!-- Contact -->
+            <div class="col-12 col-lg-4">
+
+                <h5 class="footer-title">Get in Touch</h5>
+
+                <div class="footer-contact">
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Egypt, Cairo
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        support@hotelia.com
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        +20 101 149 2397
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Copyright -->
+
+    <div class="footer-bottom">
+
+        <div class="container">
+
+            <div class="d-flex flex-column flex-md-row
+                        justify-content-between align-items-center gap-2">
+
+                <p class="m-0">
+                    © 2026 Hotelia. All rights reserved.
+                </p>
+
+                <p class="m-0">
+                    Made for travelers, by travelers.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+    <script src="BootFiles/js/bootstrap.bundle.min.js"></script>
+    <script src="BootFiles/js/all.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/home.js"></script>
+
+</body>
+</html>

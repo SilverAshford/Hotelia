@@ -1,0 +1,160 @@
+/* ==========================================================================
+   HOME PAGE STYLES (index.html)
+   ========================================================================== */
+
+.hero-section {
+    background:
+        linear-gradient(
+            135deg,
+            color-mix(in srgb, var(--primary-dark) 25%, transparent),
+            color-mix(in srgb, var(--primary-color) 20%, transparent)
+        ),
+        url('../assets/hotel_room1.jpg') center/cover no-repeat;
+
+    min-height: 20vh;
+    user-select: none;
+}
+
+.hero-content h1 {
+    letter-spacing: -1px;
+}
+
+/* ── Search wrapper: wider to fit 3 fields ── */
+.search-box-wrapper {
+    max-width: 900px;
+    width: 100%;
+}
+
+.modern-search-bar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    padding: 8px 10px 8px 20px;
+    border-radius: 100px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    gap: 0;
+    transition: all 0.3s ease;
+    flex-wrap: nowrap;
+}
+
+.modern-search-bar:focus-within {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+    background: var(--surface-color);
+}
+
+/* Each field separated by a vertical divider */
+.search-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 16px;
+    border-right: 1px solid #e2e8f0;
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.search-item:last-of-type {
+    border-right: none;
+}
+
+.input-icon {
+    font-size: 1.1rem;
+    color: var(--muted-color, #475569);
+    flex-shrink: 0;
+}
+
+.input-content {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    width: 100%;
+}
+
+.input-content label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--muted-color, #64748b);
+    margin-bottom: 2px;
+    white-space: nowrap;
+}
+
+.input-content input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-color, #0f172a);
+    width: 100%;
+    padding: 0;
+}
+
+.input-content input[type="date"] {
+    min-width: 120px;
+}
+
+.input-content input::placeholder {
+    color: var(--muted-color, #94a3b8);
+}
+
+.search-btn {
+    background: #0f172a;
+    color: var(--surface-color);
+    border: none;
+    border-radius: 100px;
+    padding: 12px 28px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-left: 8px;
+}
+
+.search-btn:hover {
+    background: #1e293b;
+    transform: translateY(-1px);
+}
+
+/* ── Available badge on hotel cards ── */
+.badge.bg-success {
+    font-size: 0.72rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .modern-search-bar {
+        flex-direction: column;
+        border-radius: 24px;
+        padding: 16px;
+        flex-wrap: wrap;
+    }
+
+    .search-item {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+        padding: 10px 4px;
+    }
+
+    .search-item:last-of-type {
+        border-bottom: none;
+    }
+
+    .search-btn {
+        width: 100%;
+        border-radius: 16px;
+        margin-top: 8px;
+        margin-left: 0;
+        padding: 14px;
+    }
+
+    .input-content input[type="date"] {
+        min-width: 0;
+    }
+}

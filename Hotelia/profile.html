@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="BootFiles/css/bootstrap.min.css">
+    <link rel="stylesheet" href="BootFiles/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/profile.css">
+
+    <title>Hotelia - My Profile</title>
+    <link rel="shortcut icon" href="assets/leaf.png" type="image/x-icon">
+</head>
+
+<body class="main-theme">
+
+    <header class="bg-brown">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between heading">
+                <a href="index.html" class="d-flex align-items-center logo-container text-decoration-none">
+                    <i class="fa-solid fa-feather-pointed logo-ic"></i>
+                    <h1 class="logo text-white m-0">Hotelia</h1>
+                </a>
+                <nav class="d-flex align-items-center gap-3 navig" id="mainNav">
+                    <a href="profile.html" class="btn btn-light fw-bold" style="color:var(--primary-dark)">Profile</a>
+                    <button onclick="handleLogout()" class="btn btn-outline-light">Logout</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="py-5">
+        <div class="container profile-section">
+            <!-- Grid متكاملة بأبعاد متناسقة -->
+            <div class="row g-4">
+
+                <!-- 1. Account Info -->
+                <div class="col-12 col-md-6">
+                    <div class="profile-card h-100">
+                        <h5 class="fw-bold mb-4 d-flex align-items-center" style="color:var(--primary-color);">
+                            <i class="fa-solid fa-circle-info me-2"></i>Account Info
+                        </h5>
+
+                        <div class="info-item mb-3 d-flex align-items-center gap-3">
+                            <div class="info-icon"><i class="fa-solid fa-user"></i></div>
+                            <div>
+                                <div class="info-label text-muted small">Full Name</div>
+                                <div class="info-value fw-semibold" id="infoName">—</div>
+                            </div>
+                        </div>
+
+                        <div class="info-item mb-3 d-flex align-items-center gap-3">
+                            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <div class="info-label text-muted small">Email Address</div>
+                                <div class="info-value fw-semibold" id="infoEmail">—</div>
+                            </div>
+                        </div>
+
+                        <div class="info-item mb-3 d-flex align-items-center gap-3">
+                            <div class="info-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div>
+                                <div class="info-label text-muted small">Account Role</div>
+                                <div class="info-value fw-semibold" id="infoRole">—</div>
+                            </div>
+                        </div>
+
+                        <div class="info-item d-flex align-items-center gap-3">
+                            <div class="info-icon"><i class="fa-solid fa-calendar-plus"></i></div>
+                            <div>
+                                <div class="info-label text-muted small">Created At</div>
+                                <div class="info-value fw-semibold" id="infoCreatedAt">—</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Quick Access -->
+                <div class="col-12 col-md-6">
+                    <div class="profile-card h-100">
+                        <h5 class="fw-bold mb-4 d-flex align-items-center" style="color:var(--primary-color);">
+                            <i class="fa-solid fa-th-large me-2"></i>Quick Access
+                        </h5>
+
+                        <div class="row g-3" id="quickLinks">
+
+                            <div class="col-6">
+                                <a href="my_bookings.html" class="quick-link-card text-decoration-none h-100 d-flex align-items-center p-3 rounded border">
+                                    <div class="ql-icon me-3"><i class="fa-solid fa-calendar-check fs-3"></i></div>
+                                    <div class="ql-text">
+                                        <h6 class="mb-1 text-dark fw-bold">My Bookings</h6>
+                                        <p class="mb-0 text-muted small">View all reservations</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6">
+                                <a href="index.html" class="quick-link-card text-decoration-none h-100 d-flex align-items-center p-3 rounded border">
+                                    <div class="ql-icon me-3"><i class="fa-solid fa-magnifying-glass fs-3"></i></div>
+                                    <div class="ql-text">
+                                        <h6 class="mb-1 text-dark fw-bold">Browse Hotels</h6>
+                                        <p class="mb-0 text-muted small">Discover destinations</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6">
+                                <a href="index.html#hotels-results-section" class="quick-link-card text-decoration-none h-100 d-flex align-items-center p-3 rounded border">
+                                    <div class="ql-icon me-3"><i class="fa-solid fa-plus-circle fs-3"></i></div>
+                                    <div class="ql-text">
+                                        <h6 class="mb-1 text-dark fw-bold">New Reservation</h6>
+                                        <p class="mb-0 text-muted small">Book your next stay</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-6">
+                                <a href="#" class="quick-link-card text-decoration-none h-100 d-flex align-items-center p-3 rounded border">
+                                    <div class="ql-icon me-3"><i class="fa-solid fa-headset fs-3"></i></div>
+                                    <div class="ql-text">
+                                        <h6 class="mb-1 text-dark fw-bold">Help & Support</h6>
+                                        <p class="mb-0 text-muted small">Contact us or FAQs</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-12" id="adminLinkSlot"></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Appearance -->
+                <div class="col-12 col-md-6">
+                    <div class="profile-card h-100">
+                        <h5 class="fw-bold mb-3 d-flex align-items-center" style="color:var(--primary-color);">
+                            <i class="fa-solid fa-palette me-2"></i>Appearance
+                        </h5>
+                        <p class="theme-section-title mb-3">Choose a color theme</p>
+
+                        <div class="theme-grid" id="themeGrid">
+                        </div>
+
+                        <p class="text-muted small mt-3 mb-0 text-center">
+                            Theme applies across all pages instantly.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 4. Danger Zone (مربع كامل مستقل متناسق مع بقية الأجزاء) -->
+                <div class="col-12 col-md-6">
+                    <div class="profile-card danger-zone-card h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <h5 class="fw-bold mb-3 d-flex align-items-center text-danger">
+                                <i class="fa-solid fa-triangle-exclamation me-2"></i>Danger Zone
+                            </h5>
+                            <p class="text-muted small mb-3">Once you delete your account, all your bookings and personal data will be permanently removed. This action cannot be undone.</p>
+                        </div>
+                        <div>
+                            <button class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteAccountModal">
+                                <i class="fa-solid fa-trash-can me-1"></i>Delete My Account
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Delete Account Confirmation Modal -->
+    <div class="modal fade" id="deleteAccountModal" tabindex="-1" aria-labelledby="deleteAccountModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold text-danger" id="deleteAccountModalLabel">
+                        <i class="fa-solid fa-triangle-exclamation me-2"></i>Delete Account
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-2">
+                    <p class="mb-2">Are you sure you want to delete your account?</p>
+                    <ul class="text-muted small mb-0">
+                        <li>All your bookings will be permanently deleted.</li>
+                        <li>Your personal data will be removed from our system.</li>
+                        <li>This action <strong>cannot be undone</strong>.</li>
+                    </ul>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" id="confirmDeleteBtn">
+                        <span id="deleteSpinner" class="spinner-border spinner-border-sm me-1 d-none" role="status"></span>
+                        Yes, Delete My Account
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-auto">
+        <div class="container py-5">
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fa-solid fa-feather-pointed footer-icon me-2"></i>
+                        <h3 class="footer-logo m-0 fs-4">Hotelia</h3>
+                    </div>
+                    <p class="footer-text">Find your perfect stay, explore amazing destinations, and make every journey unforgettable.</p>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h5 class="footer-title mb-3">Explore</h5>
+                    <ul class="list-unstyled footer-links mb-0">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none">Home</a></li>
+                        <li><a href="my_bookings.html" class="text-decoration-none">My Bookings</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h5 class="footer-title mb-3">Support</h5>
+                    <ul class="list-unstyled footer-links mb-0">
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Help Center</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Contact Us</a></li>
+                        <li><a href="#" class="text-decoration-none">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-lg-4">
+                    <h5 class="footer-title mb-3">Get in Touch</h5>
+                    <div class="footer-contact">
+                        <p class="mb-2 d-flex align-items-center gap-2"><i class="fa-solid fa-location-dot"></i> Egypt, Cairo</p>
+                        <p class="mb-2 d-flex align-items-center gap-2"><i class="fa-solid fa-envelope"></i> support@hotelia.com</p>
+                        <p class="mb-0 d-flex align-items-center gap-2"><i class="fa-solid fa-phone"></i> +20 101 149 2397</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom py-3 border-top">
+            <div class="container">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                    <p class="m-0 small text-muted">© 2026 Hotelia. All rights reserved.</p>
+                    <p class="m-0 small text-muted">Made for travelers, by travelers.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="BootFiles/js/bootstrap.bundle.min.js"></script>
+    <script src="BootFiles/js/all.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/profile.js"></script>
+
+</body>
+</html>

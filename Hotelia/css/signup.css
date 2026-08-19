@@ -1,0 +1,22 @@
+@import url('login.css');
+
+* {
+    user-select: none;
+}
+
+.auth-card-signup {
+    max-width: 440px;
+}
+
+.auth-grid-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+@media (max-width: 576px) {
+    .auth-grid-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}

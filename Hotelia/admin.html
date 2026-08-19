@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="BootFiles/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="BootFiles/css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/admin_dashboard.css">
+
+    <title>Hotelia Admin Dashboard</title>
+    <link rel="shortcut icon" href="assets/leaf.png" type="image/x-icon">
+</head>
+
+<body class="main-theme">
+
+    <header class="bg-brown">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between heading">
+
+                <a href="admin.html" class="d-flex logo-container text-decoration-none">
+                    <i class="fa-solid fa-feather-pointed logo-ic"></i>
+                    <h1 class="logo text-white m-0">Hotelia Admin</h1>
+                </a>
+
+                <nav class="d-flex align-items-center gap-3 navig">
+                    <a href="admin-profile.html" class="btn btn-light" style="color: var(--primary-dark); font-weight: bold;">
+                        <i class="fa-solid fa-user-circle me-1"></i>Profile
+                    </a>
+                    <button onclick="logoutAdmin()" class="btn btn-outline-light">Logout</button>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+
+<main>
+    <section class="admin-hero text-center text-white">
+        <div class="container">
+            <h2 class="display-5 fw-bold mb-3">Admin Control Panel</h2>
+            <p class="lead opacity-75">Overview of pending requests and core hotel management tools.</p>
+        </div>
+    </section>
+
+    <div class="container admin-section">
+        
+        <!-- PENDING BOOKINGS SECTION -->
+        <div class="mb-5 pb-4 border-bottom">
+            <div class="d-flex align-items-center mb-4">
+                <i class="fa-solid fa-bell fs-3 me-3" style="color: var(--primary-color);"></i>
+                <h3 class="fw-bold text-dark m-0">Pending Bookings</h3>
+            </div>
+            
+            <div class="table-responsive table-custom">
+                <table class="table table-hover mb-0">
+                    <thead>
+                        <tr>
+                            <th class="py-3 px-4">Booking Ref</th>
+                            <th class="py-3">Guest Name</th>
+                            <th class="py-3">Hotel & Room</th>
+                            <th class="py-3">Stay Dates</th>
+                            <th class="py-3">Status</th>
+                            <th class="py-3 text-end px-4">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="px-4 fw-bold text-muted">#BK-9281</td>
+                            <td class="fw-semibold">Mohamed Ali</td>
+                            <td>Grand Royal - Luxury Suite</td>
+                            <td>24 Aug - 28 Aug 2026</td>
+                            <td><span class="badge badge-pending">PENDING</span></td>
+                            <td class="text-end px-4">
+                                <button class="btn btn-sm btn-confirm me-2"><i class="fa-solid fa-check me-1"></i> Confirm</button>
+                                <button class="btn btn-sm btn-reject"><i class="fa-solid fa-xmark me-1"></i> Reject</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 fw-bold text-muted">#BK-9282</td>
+                            <td class="fw-semibold">Sarah Jenkins</td>
+                            <td>Sea View Resort - Standard Double</td>
+                            <td>01 Sep - 05 Sep 2026</td>
+                            <td><span class="badge badge-pending">PENDING</span></td>
+                            <td class="text-end px-4">
+                                <button class="btn btn-sm btn-confirm me-2"><i class="fa-solid fa-check me-1"></i> Confirm</button>
+                                <button class="btn btn-sm btn-reject"><i class="fa-solid fa-xmark me-1"></i> Reject</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 fw-bold text-muted">#BK-9285</td>
+                            <td class="fw-semibold">Omar Hassan</td>
+                            <td>Mountain Lodge - Family Room</td>
+                            <td>12 Sep - 14 Sep 2026</td>
+                            <td><span class="badge badge-pending">PENDING</span></td>
+                            <td class="text-end px-4">
+                                <button class="btn btn-sm btn-confirm me-2"><i class="fa-solid fa-check me-1"></i> Confirm</button>
+                                <button class="btn btn-sm btn-reject"><i class="fa-solid fa-xmark me-1"></i> Reject</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- MANAGEMENT CARDS SECTION -->
+        <div class="d-flex align-items-center mb-4 mt-5">
+            <i class="fa-solid fa-layer-group fs-3 me-3" style="color: var(--primary-color);"></i>
+            <h3 class="fw-bold text-dark m-0">System Management</h3>
+        </div>
+
+        <div class="row g-4">
+            
+            <!-- Hotels Management -->
+            <div class="col-md-6">
+                <div class="card card-management h-100 p-4">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+                    <h4 class="fw-bold mb-3">Hotels</h4>
+                    <p class="text-muted mb-4" style="font-size: 0.95rem;">Manage your portfolio. Add new properties, update existing hotel details, or remove closed branches.</p>
+                    <a href="hotels.html" class="btn btn-outline-dark btn-management mt-auto w-100">
+                        Manage Hotels <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Rooms Management -->
+            <div class="col-md-6">
+                <div class="card card-management h-100 p-4">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-bed"></i>
+                    </div>
+                    <h4 class="fw-bold mb-3">Room Types & Availability</h4>
+                    <p class="text-muted mb-4" style="font-size: 0.95rem;">Configure room categories per hotel. Set base prices, capacities, and manage booking date availability.</p>
+                    <a href="rooms.html" class="btn btn-outline-dark btn-management mt-auto w-100">
+                        Manage Rooms <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</main>
+
+<footer class="footer">
+
+    <div class="container py-5">
+
+        <div class="row g-4">
+
+            <!-- Brand -->
+            <div class="col-12 col-md-6 col-lg-4">
+
+                <div class="d-flex align-items-center mb-3">
+                    <i class="fa-solid fa-feather-pointed footer-icon me-2"></i>
+                    <h3 class="footer-logo m-0">Hotelia Admin</h3>
+                </div>
+
+                <p class="footer-text">
+                    Manage the best stays and ensure the highest quality experience for all our guests.
+                </p>
+
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-6 col-md-3 col-lg-2">
+
+                <h5 class="footer-title">Admin Links</h5>
+
+                <ul class="list-unstyled footer-links">
+                    <li><a href="admin.html">Dashboard</a></li>
+                    <li><a href="hotels.html">Hotels</a></li>
+                    <li><a href="rooms.html">Room Types & Availability</a></li>
+                </ul>
+
+            </div>
+
+            <!-- Support -->
+            <div class="col-6 col-md-3 col-lg-2">
+
+                <h5 class="footer-title">Support</h5>
+
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">Admin Guide</a></li>
+                    <li><a href="#">System Status</a></li>
+                    <li><a href="#">Contact IT</a></li>
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+            <div class="col-12 col-lg-4">
+
+                <h5 class="footer-title">Get in Touch</h5>
+
+                <div class="footer-contact">
+
+                    <p>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Egypt, Cairo HQ
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-envelope"></i>
+                        admin@hotelia.com
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+                        +20 101 149 2397
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                <p class="m-0">
+                    © 2026 Hotelia Admin Panel. All rights reserved.
+                </p>
+                <p class="m-0">
+                    Powered by Hotelia Core Systems.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+    <script src="BootFiles/js/bootstrap.bundle.min.js"></script>
+    <script src="BootFiles/js/all.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/admin-dashboard.js"></script>
+    
+</body>
+</html>

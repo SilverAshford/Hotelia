@@ -1,0 +1,76 @@
+/* ==========================================================================
+   MY BOOKINGS PAGE STYLES (my_bookings.html)
+   ========================================================================== */
+
+.bookings-section {
+    padding: 4rem 0;
+    background-color: var(--background-color);
+    min-height: 80vh;
+}
+
+.booking-card {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+    transition: 0.3s;
+}
+
+.booking-card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    border-color: var(--secondary-color);
+}
+
+.status-badge {
+    padding: 0.5em 1em;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-pending { background: #fef3c7; color: #d97706; }
+.status-confirmed { background: #d1fae5; color: #059669; }
+.status-rejected { background: #fee2e2; color: #dc2626; }
+.status-cancelled { background: #f3f4f6; color: #4b5563; }
+.status-completed { background: #e0e7ff; color: #4338ca; }
+
+.btn-action {
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 0.5rem 1.2rem;
+    transition: 0.2s;
+}
+
+.btn-cancel {
+    border: 1px solid #dc2626;
+    color: #dc2626;
+    background: transparent;
+}
+
+.btn-cancel:hover {
+    background: #dc2626;
+    color: #fff;
+}
+
+.btn-review {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+}
+
+.btn-review:hover {
+    background: var(--primary-dark);
+    color: #fff;
+}
+
+.hotel-thumb {
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    object-fit: cover;
+    background: var(--border-color);
+}

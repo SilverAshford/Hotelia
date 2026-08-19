@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="BootFiles/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="BootFiles/css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/hotel_details.css">
+
+    <title>Hotelia - Hotel Details</title>
+    <link rel="shortcut icon" href="assets/leaf.png" type="image/x-icon">
+</head>
+
+<body class="main-theme">
+
+    <header class="bg-brown">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between heading">
+                <a href="index.html" class="d-flex logo-container text-decoration-none">
+                    <i class="fa-solid fa-feather-pointed logo-ic"></i>
+                    <h1 class="logo text-white m-0">Hotelia</h1>
+                </a>
+                <nav class="d-flex align-items-center gap-3 navig">
+                    <a href="index.html" class="btn btn-outline-light border-0">Home</a>
+                    <a href="my_bookings.html" class="btn btn-outline-light border-0">My Bookings</a>
+                    <a href="#" class="btn btn-outline-light">Logout</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+<main>
+    <!-- Hotel Info Hero Section -->
+    <section class="hotel-hero">
+        <div class="container">
+            <div class="row align-items-end">
+                <div class="col-md-8">
+                    <span class="badge bg-light text-dark mb-2 px-3 py-2 text-uppercase fw-bold" style="letter-spacing: 1px;">Luxury Resort</span>
+                    <h1 class="display-4 fw-bold mb-2">Grand View Resort & Spa</h1>
+                    <p class="fs-5 opacity-75 mb-3"><i class="fa-solid fa-location-dot me-2"></i> Sharm El-Sheikh, Egypt</p>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="rating-stars fs-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <span class="fs-5">4.8 / 5.0 (2,450 Reviews)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Available Rooms Section -->
+    <section class="py-5" style="background-color: var(--background-color, #f7f4ef);">
+        <div class="container py-4">
+            <h2 class="fw-bold mb-4 text-dark border-bottom pb-3">Available Room Types</h2>
+            
+            <div class="row g-4">
+                
+                <!-- Room Card 1 -->
+                <div class="col-md-4">
+                    <div class="room-card h-100 d-flex flex-column">
+                        <div class="room-img">
+                            <i class="fa-solid fa-bed"></i>
+                        </div>
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <h4 class="fw-bold mb-2">Standard Double Room</h4>
+                            <p class="text-muted small mb-3">Comfortable room with city view, perfect for couples.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fa-solid fa-user-group me-2 text-muted"></i> Capacity: 2 Persons</li>
+                                <li class="mb-2"><i class="fa-solid fa-wifi me-2 text-muted"></i> Free Wi-Fi</li>
+                                <li><i class="fa-solid fa-tv me-2 text-muted"></i> Flat Screen TV</li>
+                            </ul>
+                            <div class="mt-auto d-flex align-items-center justify-content-between">
+                                <div class="room-price">$120 <span class="fs-6 text-muted fw-normal">/ night</span></div>
+                                <a href="checkout.html" class="btn btn-book text-decoration-none">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room Card 2 -->
+                <div class="col-md-4">
+                    <div class="room-card h-100 d-flex flex-column">
+                        <div class="room-img">
+                            <i class="fa-solid fa-crown"></i>
+                        </div>
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <h4 class="fw-bold mb-2">Luxury Suite</h4>
+                            <p class="text-muted small mb-3">Spacious suite with sea view, living area, and premium amenities.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fa-solid fa-user-group me-2 text-muted"></i> Capacity: 4 Persons</li>
+                                <li class="mb-2"><i class="fa-solid fa-mug-hot me-2 text-muted"></i> Breakfast Included</li>
+                                <li><i class="fa-solid fa-hot-tub-person me-2 text-muted"></i> Private Jacuzzi</li>
+                            </ul>
+                            <div class="mt-auto d-flex align-items-center justify-content-between">
+                                <div class="room-price">$350 <span class="fs-6 text-muted fw-normal">/ night</span></div>
+                                <a href="checkout.html" class="btn btn-book text-decoration-none">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Room Card 3 -->
+                <div class="col-md-4">
+                    <div class="room-card h-100 d-flex flex-column">
+                        <div class="room-img">
+                            <i class="fa-solid fa-people-roof"></i>
+                        </div>
+                        <div class="p-4 d-flex flex-column flex-grow-1">
+                            <h4 class="fw-bold mb-2">Family Room</h4>
+                            <p class="text-muted small mb-3">Connecting rooms designed for families with children.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fa-solid fa-user-group me-2 text-muted"></i> Capacity: 5 Persons</li>
+                                <li class="mb-2"><i class="fa-solid fa-water-ladder me-2 text-muted"></i> Pool Access</li>
+                                <li><i class="fa-solid fa-gamepad me-2 text-muted"></i> Kids Play Area</li>
+                            </ul>
+                            <div class="mt-auto d-flex align-items-center justify-content-between">
+                                <div class="room-price">$210 <span class="fs-6 text-muted fw-normal">/ night</span></div>
+                                <a href="checkout.html" class="btn btn-book text-decoration-none">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="d-flex align-items-center mb-3">
+                    <i class="fa-solid fa-feather-pointed footer-icon me-2"></i>
+                    <h3 class="footer-logo m-0">Hotelia</h3>
+                </div>
+                <p class="footer-text">Find your perfect stay, explore amazing destinations, and make every journey unforgettable.</p>
+                <div class="social-links d-flex gap-3 mt-3">
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+                <h5 class="footer-title">Explore</h5>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Hotels</a></li>
+                    <li><a href="#">Destinations</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+                <h5 class="footer-title">Support</h5>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-lg-4">
+                <h5 class="footer-title">Get in Touch</h5>
+                <div class="footer-contact">
+                    <p><i class="fa-solid fa-location-dot"></i> Egypt, Cairo</p>
+                    <p><i class="fa-solid fa-envelope"></i> support@hotelia.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +20 101 149 2397</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                <p class="m-0">© 2026 Hotelia. All rights reserved.</p>
+                <p class="m-0">Made for travelers, by travelers.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="BootFiles/js/bootstrap.bundle.min.js"></script>
+<script src="BootFiles/js/all.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/hotel-details.js"></script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+/* ==========================================================================
+   CHECKOUT PAGE STYLES (checkout.html)
+   ========================================================================== */
+
+.checkout-section {
+    padding: 4rem 0;
+    background-color: var(--background-color);
+    min-height: 80vh;
+}
+
+.checkout-card {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--primary-dark);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-control, .form-select {
+    border: 1px solid #ced4da;
+    padding: 0.8rem;
+    border-radius: 8px;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(145,119,97,0.25);
+}
+
+.summary-box {
+    background: #fdfbf7;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.total-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--success-color);
+}
+
+.btn-submit {
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    font-size: 1.1rem;
+    transition: 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.room-thumb {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    background: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2rem;
+}

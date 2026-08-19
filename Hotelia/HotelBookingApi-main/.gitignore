@@ -1,0 +1,17 @@
+## Build & Compilation Output
+[Bb]in/
+[Ob]j/
+[Ll]og/
+[Ll]ogs/
+
+## User-specific & IDE files
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## OS Generated Files
+.DS_Store
+Thumbs.db

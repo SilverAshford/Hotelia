@@ -1,0 +1,120 @@
+/* ==========================================================================
+   ADMIN DASHBOARD PAGE STYLES (admin.html)
+   ========================================================================== */
+
+.admin-section {
+    padding: 4rem 0;
+}
+
+.admin-hero {
+    background: var(--header-gradient);
+    padding: 3rem 0;
+    border-bottom: 4px solid var(--secondary-color);
+}
+
+.card-management {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+}
+
+.card-management:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    border-color: var(--primary-color);
+}
+
+.icon-box {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 5px 15px rgba(145,119,97,0.3);
+}
+
+.table-custom {
+    background: var(--surface-color);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    border: 1px solid var(--border-color);
+}
+
+.table-custom thead {
+    background-color: var(--surface-color);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.table-custom th {
+    color: var(--primary-dark);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.table-custom td {
+    color: var(--text-color);
+    vertical-align: middle;
+}
+
+.badge-pending {
+    background-color: var(--warning-color);
+    color: #fff;
+    padding: 0.5em 0.8em;
+    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.btn-confirm {
+    background-color: var(--success-color);
+    color: white;
+    border: none;
+    transition: 0.2s;
+    border-radius: 8px;
+    padding: 0.4rem 0.8rem;
+}
+
+.btn-confirm:hover {
+    background-color: #43634e;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.btn-reject {
+    background-color: var(--danger-color);
+    color: white;
+    border: none;
+    transition: 0.2s;
+    border-radius: 8px;
+    padding: 0.4rem 0.8rem;
+}
+
+.btn-reject:hover {
+    background-color: #c92a36;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.btn-management {
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 0.6rem;
+    color: var(--primary-dark);
+    border-color: var(--border-color);
+}
+
+.btn-management:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+}

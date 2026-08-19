@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Hotelia</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="BootFiles/css/bootstrap.min.css">
+    <link rel="stylesheet" href="BootFiles/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="shortcut icon" href="assets/leaf.png" type="image/x-icon">
+</head>
+<body class="main-theme auth-page">
+
+    <!-- Navigation Header -->
+    <header class="bg-brown fixed-top auth-header">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between heading py-3">
+                <a href="index.html" class="d-flex align-items-center gap-4 text-decoration-none logo-container">
+                    <i class="fa-solid fa-feather-pointed logo-ic"></i>
+                    <h1 class="logo text-white m-0 h4">Hotelia</h1>
+                </a>
+                <nav class="d-flex align-items-center gap-2">
+                    <a href="index.html" class="btn btn-outline-light btn-sm px-3 rounded-pill">
+                        <i class="fa-solid fa-house me-1"></i> Home
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Split Auth Container -->
+    <div class="auth-wrapper">
+        <div class="row g-0 w-100">
+            
+            <!-- Left Hero Column -->
+            <div class="col-lg-6 d-none d-lg-flex auth-hero-col">
+            </div>
+
+            <!-- Right Form Column -->
+            <div class="col-12 col-lg-6 auth-form-col">
+                <div class="auth-card auth-card-signup">
+                    
+                    <div class="auth-header-box">
+                        <div class="auth-badge">
+                            <i class="fa-solid fa-feather-pointed"></i> Hotelia
+                        </div>
+                        <h2 class="auth-title">Create Account</h2>
+                        <p class="auth-subtitle">Join us to discover and book premium accommodations</p>
+                    </div>
+
+                    <form id="registerForm">
+                        
+                        <!-- Full Name Input -->
+                        <div class="auth-group">
+                            <label class="auth-label" for="signupName">Full Name</label>
+                            <div class="auth-input-wrapper">
+                                <input type="text" id="signupName" class="auth-input" placeholder="e.g. John Doe" required>
+                                <i class="fa-regular fa-user auth-input-icon"></i>
+                            </div>
+                        </div>
+
+                        <!-- Email Input -->
+                        <div class="auth-group">
+                            <label class="auth-label" for="signupEmail">Email Address</label>
+                            <div class="auth-input-wrapper">
+                                <input type="email" id="signupEmail" class="auth-input" placeholder="name@example.com" required>
+                                <i class="fa-regular fa-envelope auth-input-icon"></i>
+                            </div>
+                        </div>
+
+                        <!-- Password Grid (Password & Confirm) -->
+                        <div class="auth-grid-row">
+                            <!-- Password Input -->
+                            <div class="auth-group">
+                                <label class="auth-label" for="signupPassword">Password</label>
+                                <div class="auth-input-wrapper">
+                                    <input type="password" id="signupPassword" class="auth-input" placeholder="Create password" minlength="6" required>
+                                    <i class="fa-solid fa-lock auth-input-icon"></i>
+                                    <button type="button" class="password-toggle-btn" onclick="togglePassword('signupPassword', this)" title="Toggle password visibility">
+                                        <i class="fa-regular fa-eye-slash"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Confirm Password Input -->
+                            <div class="auth-group">
+                                <label class="auth-label" for="signupConfirmPassword">Confirm Password</label>
+                                <div class="auth-input-wrapper">
+                                    <input type="password" id="signupConfirmPassword" class="auth-input" placeholder="Confirm password" required>
+                                    <i class="fa-solid fa-lock auth-input-icon"></i>
+                                    <button type="button" class="password-toggle-btn" onclick="togglePassword('signupConfirmPassword', this)" title="Toggle password visibility">
+                                        <i class="fa-regular fa-eye-slash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p id="authMessage" class="auth-message" role="alert" aria-live="polite"></p>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn-auth-primary">
+                            <span>Create Account</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </form>
+
+                    <!-- Divider -->
+                    <div class="auth-divider">
+                        <span>Or sign up with</span>
+                    </div>
+
+                    <!-- Modern Google Login Button -->
+                    <a href="#" class="btn-google-login" role="button" aria-label="Sign up with Google">
+                        <svg class="google-icon-svg" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                            <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                            <path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/>
+                            <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                        </svg>
+                        <span>Continue with Google</span>
+                    </a>
+
+                    <!-- Footer Link -->
+                    <p class="auth-footer-text">
+                        Already have an account? <a href="login.html">Login</a>
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="BootFiles/js/bootstrap.bundle.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/auth-ui.js"></script>
+    <script src="js/signup.js"></script>
+</body>
+</html>

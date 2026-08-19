@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="BootFiles/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="BootFiles/css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/rooms.css">
+    <title>Hotelia Admin - Room Types</title>
+    <link rel="shortcut icon" href="assets/leaf.png" type="image/x-icon">
+</head>
+<body class="main-theme">
+
+    <header class="bg-brown">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between heading">
+                <a href="admin.html" class="d-flex logo-container text-decoration-none">
+                    <i class="fa-solid fa-feather-pointed logo-ic"></i>
+                    <h1 class="logo text-white m-0">Hotelia Admin</h1>
+                </a>
+                <nav class="d-flex align-items-center gap-3 navig">
+                    <a href="admin.html" class="btn btn-outline-light">Dashboard</a>
+                    <a href="rooms.html" class="btn btn-outline-light">Rooms</a>
+                    <a href="admin-profile.html" class="btn btn-light" style="color:var(--primary-dark);font-weight:bold;">
+                        <i class="fa-solid fa-user-circle me-1"></i>Profile
+                    </a>
+                    <button onclick="logoutAdmin()" class="btn btn-outline-light">Logout</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+<main>
+    <div class="container admin-section">
+        
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <h2 class="fw-bold text-dark m-0"><i class="fa-solid fa-bed me-2" style="color: var(--primary-color);"></i>Room Types Management</h2>
+                <p class="text-muted mt-2">Select a hotel to view and manage its room types and availability.</p>
+            </div>
+            <button class="btn btn-add" style="display:none;"><i class="fa-solid fa-plus me-2"></i>Add Room Type</button>
+        </div>
+        
+        <div class="table-responsive table-custom">
+            <table class="table table-hover mb-0">
+                <thead>
+                    <tr>
+                        <th class="py-3 px-4">Room Type</th>
+                        <th class="py-3">Capacity</th>
+                        <th class="py-3">Bed Type</th>
+                        <th class="py-3">Base Price / Night</th>
+                        <th class="py-3">Availability</th>
+                        <th class="py-3 text-end px-4">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="6" class="text-center py-5 text-muted">
+                            <i class="fa-solid fa-building fa-2x mb-2 d-block opacity-40"></i>
+                            Select a hotel above to see its room types.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</main>
+
+<footer class="footer">
+    <!-- Footer content remains the same as admin.html -->
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="d-flex align-items-center mb-3">
+                    <i class="fa-solid fa-feather-pointed footer-icon me-2"></i>
+                    <h3 class="footer-logo m-0">Hotelia Admin</h3>
+                </div>
+                <p class="footer-text">Manage the best stays and ensure the highest quality experience for all our guests.</p>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+                <h5 class="footer-title">Admin Links</h5>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="admin.html">Dashboard</a></li>
+                    <li><a href="hotels.html">Hotels</a></li>
+                    <li><a href="rooms.html">Room Types & Availability</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+                <h5 class="footer-title">Support</h5>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">Admin Guide</a></li>
+                    <li><a href="#">System Status</a></li>
+                    <li><a href="#">Contact IT</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-lg-4">
+                <h5 class="footer-title">Get in Touch</h5>
+                <div class="footer-contact">
+                    <p><i class="fa-solid fa-location-dot"></i> Egypt, Cairo HQ</p>
+                    <p><i class="fa-solid fa-envelope"></i> admin@hotelia.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +20 101 149 2397</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                <p class="m-0">© 2026 Hotelia Admin Panel. All rights reserved.</p>
+                <p class="m-0">Powered by Hotelia Core Systems.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="BootFiles/js/bootstrap.bundle.min.js"></script>
+<script src="BootFiles/js/all.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/admin-rooms.js"></script>
+</body>
+</html>
