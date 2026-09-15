@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="BootFiles/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="BootFiles/css/all.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/checkout.css">
+
+    <title>Hotelia - Checkout</title>
+    <link rel="shortcut icon" href="assets/leaf.png" type="image/x-icon">
+</head>
+
+<body class="main-theme">
+
+    <header class="bg-brown">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between heading">
+                <a href="index.html" class="d-flex logo-container text-decoration-none">
+                    <i class="fa-solid fa-feather-pointed logo-ic"></i>
+                    <h1 class="logo text-white m-0">Hotelia</h1>
+                </a>
+                <nav class="d-flex align-items-center gap-3 navig" id="mainNav">
+                    <button class="nav-toggler" onclick="this.nextElementSibling.classList.toggle('open')" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="nav-collapse">
+                        <a href="index.html" class="btn btn-outline-light border-0">Home</a>
+                        <a href="my_bookings.html" class="btn btn-outline-light border-0">My Bookings</a>
+                        <a href="profile.html" class="btn btn-outline-light border-0">Profile</a>
+                        <button onclick="logoutUser()" class="btn btn-outline-light">Logout</button>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+<main class="checkout-section">
+    <div class="container">
+        
+        <div class="text-center mb-5">
+            <h2 class="display-6 fw-bold text-dark">Complete Your Reservation</h2>
+            <p class="text-muted">Review your booking details and confirm to secure your stay.</p>
+        </div>
+
+        <div class="row g-5">
+            <!-- Booking Form -->
+            <div class="col-lg-7 col-xl-8">
+                <div class="checkout-card mb-4">
+                    <h4 class="fw-bold mb-3 border-bottom pb-3">
+                        <i class="fa-solid fa-user me-2" style="color:var(--primary-color);"></i>
+                        Your Account
+                    </h4>
+                    <div class="p-3 rounded-3 mb-4" style="background:var(--background-color);border:1px solid var(--border-color);">
+                        <div class="d-flex align-items-center gap-3">
+                            <div style="width:48px;height:48px;border-radius:50%;background:var(--primary-color);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:bold;">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div>
+                                <div class="fw-bold" style="color:var(--text-color);" id="accountName">Loading...</div>
+                                <div class="small text-muted" id="accountEmail">Loading account details…</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4 class="fw-bold mb-3 border-bottom pb-3 mt-4">
+                        <i class="fa-solid fa-calendar-check me-2" style="color:var(--primary-color);"></i>
+                        Reservation Details
+                    </h4>
+                    <form id="bookingForm">
+                        <div class="row g-3 mb-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">
+                                    <i class="fa-solid fa-calendar-plus me-1 text-muted"></i>
+                                    Check-in Date *
+                                </label>
+                                <input type="date" id="checkInDate" class="form-control" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">
+                                    <i class="fa-solid fa-calendar-minus me-1 text-muted"></i>
+                                    Check-out Date *
+                                </label>
+                                <input type="date" id="checkOutDate" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold" for="guestCount">
+                                    <i class="fa-solid fa-users me-1 text-muted"></i>
+                                    Number of Guests *
+                                </label>
+                                <select class="form-select" id="guestCount" required></select>
+                                <div class="form-text" id="capacityHelp">Loading room capacity…</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">
+                                    <i class="fa-solid fa-moon me-1 text-muted"></i>
+                                    Duration
+                                </label>
+                                <input type="text" class="form-control" id="nightCount" value="—" readonly style="background:var(--background-color);">
+                            </div>
+                        </div>
+
+                        <!-- Availability status (will be shown after date selection) -->
+                        <div id="availabilityStatus" class="alert mt-3" style="display:none;"></div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Booking Summary Sidebar -->
+            <div class="col-lg-5 col-xl-4">
+                <div class="checkout-card position-sticky" style="top: 2rem;">
+                    <h4 class="fw-bold mb-4 border-bottom pb-3">
+                        <i class="fa-solid fa-file-invoice-dollar me-2" style="color:var(--primary-color);"></i>
+                        Booking Summary
+                    </h4>
+                    
+                    <div class="d-flex align-items-center mb-4 p-3 rounded-3" style="background:var(--background-color);border:1px solid var(--border-color);">
+                        <div class="room-thumb me-3"><i class="fa-solid fa-bed"></i></div>
+                        <div>
+                            <h5 class="fw-bold mb-1" id="summaryRoomName" style="color:var(--text-color);">Loading room…</h5>
+                            <p class="text-muted small mb-0" id="summaryHotelName">Loading hotel…</p>
+                        </div>
+                    </div>
+
+                    <div class="summary-box mb-4">
+                        <div class="d-flex justify-content-between mb-2 pb-2">
+                            <span class="text-muted">
+                                <i class="fa-solid fa-money-bill-wave me-1"></i>
+                                Price per night
+                            </span>
+                            <span class="fw-semibold" id="summaryPrice">—</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2 pb-2">
+                            <span class="text-muted">
+                                <i class="fa-solid fa-moon me-1"></i>
+                                Duration
+                            </span>
+                            <span class="fw-semibold" id="summaryNights">—</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-3 pb-3 border-bottom">
+                            <span class="text-muted">
+                                <i class="fa-solid fa-users me-1"></i>
+                                Guests
+                            </span>
+                            <span class="fw-semibold" id="summaryGuests">—</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bold fs-5 text-dark">Total Cost</span>
+                            <span class="total-price" id="summaryTotal">—</span>
+                        </div>
+                    </div>
+
+                    <div class="p-3 rounded-3 mb-4" style="background:var(--background-color);border:1px solid var(--border-color);">
+                        <p class="text-muted small mb-0 text-center">
+                            <i class="fa-solid fa-info-circle me-1"></i> 
+                            Your booking will be <strong>PENDING</strong> until hotel confirmation. 
+                            <br>No payment required now.
+                        </p>
+                    </div>
+
+                    <button class="btn-submit" type="button">
+                        <i class="fa-solid fa-check-circle me-2"></i>
+                        Submit Reservation
+                    </button>
+
+                    <div id="checkoutMessage" style="display:none;"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="d-flex align-items-center mb-3">
+                    <i class="fa-solid fa-feather-pointed footer-icon me-2"></i>
+                    <h3 class="footer-logo m-0">Hotelia</h3>
+                </div>
+                <p class="footer-text">Find your perfect stay, explore amazing destinations, and make every journey unforgettable.</p>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+                <h5 class="footer-title">Explore</h5>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Hotels</a></li>
+                    <li><a href="#">Destinations</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+                <h5 class="footer-title">Support</h5>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div class="col-12 col-lg-4">
+                <h5 class="footer-title">Get in Touch</h5>
+                <div class="footer-contact">
+                    <p><i class="fa-solid fa-location-dot"></i> Egypt, Cairo</p>
+                    <p><i class="fa-solid fa-envelope"></i> support@hotelia.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +20 101 149 2397</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                <p class="m-0">© 2026 Hotelia. All rights reserved.</p>
+                <p class="m-0">Made for travelers, by travelers.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="BootFiles/js/bootstrap.bundle.min.js"></script>
+<script src="BootFiles/js/all.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/checkout.js"></script>
+</body>
+</html>

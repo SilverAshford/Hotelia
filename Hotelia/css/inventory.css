@@ -1,0 +1,92 @@
+/* ==========================================================================
+   ROOM INVENTORY MANAGEMENT PAGE STYLES (inventory.html)
+   ========================================================================== */
+
+.admin-section {
+    padding: 4rem 0;
+}
+
+.table-custom {
+    background: var(--surface-color);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    border: 1px solid var(--border-color);
+}
+
+.table-custom thead {
+    background-color: var(--surface-color);
+    border-bottom: 2px solid var(--border-color);
+}
+
+.table-custom th {
+    color: var(--primary-dark);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.table-custom td {
+    color: var(--text-color);
+    vertical-align: middle;
+}
+
+.filter-card {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+
+.input-qty {
+    width: 70px;
+    text-align: center;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    padding: 0.3rem;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+/* MD: tablet portrait */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .admin-section { padding: 3rem 0; }
+    .filter-card   { padding: 1.25rem; }
+}
+
+/* SM & below: phones */
+@media (max-width: 767.98px) {
+    .admin-section { padding: 1.5rem 0; }
+    .filter-card   { padding: 1rem; }
+
+    /* filter form: stack all fields full width */
+    .filter-card .row > [class*="col-"] {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .table-custom th,
+    .table-custom td {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.4rem;
+    }
+
+    .table-custom td:last-child { white-space: nowrap; }
+    .input-qty { width: 58px; }
+}
+
+/* XS: small phones */
+@media (max-width: 575.98px) {
+    .table-custom th,
+    .table-custom td {
+        font-size: 0.72rem;
+        padding: 0.35rem 0.28rem;
+    }
+
+    .input-qty { width: 50px; font-size: 0.78rem; }
+}

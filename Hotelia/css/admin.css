@@ -1,0 +1,275 @@
+/* ==========================================================================
+   ADMIN PANEL COMMON STYLES
+   ========================================================================== */
+
+.admin-section {
+    padding: 4rem 0;
+}
+
+.card-management {
+    background-color: var(--surface-color, #ffffff);
+    border: 1px solid var(--border-color, #e5ded6);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: all 0.3s ease;
+}
+
+.card-management:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    border-color: var(--primary-color, #917761);
+}
+
+.icon-box {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--secondary-color, #d8c3a5), var(--primary-color, #917761));
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 5px 15px rgba(145,119,97,0.3);
+}
+
+.table-custom {
+    background: var(--surface-color, #ffffff);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    border: 1px solid var(--border-color, #e5ded6);
+}
+
+.table-custom thead {
+    background-color: var(--surface-color);
+    border-bottom: 2px solid var(--border-color, #e5ded6);
+}
+
+.table-custom th {
+    color: var(--primary-dark, #6f5845);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+.table-custom td {
+    color: var(--text-color, #2f2a26);
+    vertical-align: middle;
+}
+
+.badge-pending {
+    background-color: #f59e0b;
+    color: #fff;
+    padding: 0.5em 0.8em;
+    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.btn-confirm {
+    background-color: var(--success-color, #557a61);
+    color: white;
+    border: none;
+    transition: 0.2s;
+    border-radius: 8px;
+    padding: 0.4rem 0.8rem;
+}
+
+.btn-confirm:hover {
+    background-color: #43634e;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.btn-reject {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    transition: 0.2s;
+    border-radius: 8px;
+    padding: 0.4rem 0.8rem;
+}
+
+.btn-reject:hover {
+    background-color: #c92a36;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.admin-hero {
+    background: linear-gradient(135deg, #5f4938 0%, #917761 100%);
+    padding: 3rem 0;
+    border-bottom: 4px solid var(--secondary-color, #d8c3a5);
+}
+
+.btn-management {
+    border-radius: 8px;
+    font-weight: 600;
+    padding: 0.6rem;
+    color: var(--primary-dark, #6f5845);
+    border-color: var(--border-color, #e5ded6);
+}
+
+.btn-management:hover {
+    background-color: var(--primary-color, #917761);
+    color: #fff;
+    border-color: var(--primary-color, #917761);
+}
+
+/* ==========================================================================
+   PAGE SPECIFIC STYLES
+   ========================================================================== */
+
+.btn-add {
+    background-color: var(--primary-color, #917761);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.btn-add:hover {
+    background-color: var(--primary-dark, #6f5845);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-edit {
+    background-color: #0ea5e9;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.3rem 0.6rem;
+}
+
+.btn-edit:hover {
+    background-color: #0284c7;
+    color: white;
+}
+
+.btn-delete {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 0.3rem 0.6rem;
+}
+
+.btn-delete:hover {
+    background-color: #c92a36;
+    color: white;
+}
+
+.filter-card {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+
+.input-qty {
+    width: 70px;
+    text-align: center;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    padding: 0.3rem;
+}
+
+/* ==========================================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+
+/* XL: large desktop */
+@media (min-width: 1200px) {
+    .admin-section { padding: 5rem 0; }
+    .admin-hero    { padding: 4rem 0; }
+}
+
+/* LG: tablet landscape / small laptop */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .admin-hero { padding: 2.5rem 0; }
+}
+
+/* MD: tablet portrait */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .admin-section { padding: 3rem 0; }
+    .admin-hero    { padding: 2rem 0; }
+    .admin-hero h2 { font-size: 1.8rem; }
+    .filter-card   { padding: 1.25rem; }
+}
+
+/* SM & below: phones */
+@media (max-width: 767.98px) {
+    .admin-section { padding: 1.5rem 0; }
+    .admin-hero    { padding: 1.5rem 0; }
+    .admin-hero h2 { font-size: 1.4rem; }
+
+    /* Stack page title + action button vertically */
+    .d-flex.justify-content-between.align-items-center.mb-4 {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 0.75rem;
+    }
+
+    .btn-add     { width: 100%; text-align: center; }
+    .filter-card { padding: 1rem; }
+
+    .table-custom th,
+    .table-custom td {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.4rem;
+    }
+
+    /* Buttons: shrink but don't stack full-width */
+    .btn-confirm,
+    .btn-reject {
+        padding: 0.3rem 0.55rem;
+        font-size: 0.78rem;
+        white-space: nowrap;
+    }
+
+    /* Keep action cell compact */
+    .table-custom td:last-child {
+        white-space: nowrap;
+    }
+}
+
+/* XS: small phones */
+@media (max-width: 575.98px) {
+    .admin-section { padding: 1rem 0; }
+    .admin-hero h2 { font-size: 1.2rem; }
+    .icon-box      { width: 40px; height: 40px; font-size: 1.1rem; margin-bottom: 0.75rem; }
+
+    .table-custom th,
+    .table-custom td {
+        font-size: 0.72rem;
+        padding: 0.35rem 0.28rem;
+    }
+
+    .btn-confirm,
+    .btn-reject,
+    .btn-edit,
+    .btn-delete {
+        padding: 0.25rem 0.4rem;
+        font-size: 0.7rem;
+    }
+
+    .badge-pending  { font-size: 0.68rem; padding: 0.3em 0.5em; }
+    .input-qty      { width: 52px; font-size: 0.78rem; }
+
+    /* Side margin so tables/cards don't touch edges */
+    .table-custom,
+    .filter-card,
+    .card-management {
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+    }
+}
